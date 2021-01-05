@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Once Upon a Time</title>
+</head>
+<body>
+    <h1>Once Upon a Time: Gender Portrayals within English Fairy Tales</h1>
+    <p id="author">Isaac Bock | isaactbock@wustl.edu | 466249</p>
+    <div id="sources" class="sources">via Project Gutenberg + 8 other sources
+        <div id="sources_tooltip" class="helpTooltip" style="display: none;">
+            <ul>
+                <li>Fairy tales via Joseph Jacobs & Anonymous (2018). English Fairy Tales. Project Gutenberg. Retrieved Nov. 3, 2020 from https://www.gutenberg.org/files/7439/7439-h/7439-h.htm</li>
+                <li>Unique word data via Design215 (2020). Wordlist Maker. Design215. Retrieved Nov. 3, 2020 from https://design215.com/toolbox/wordlist.php</li>
+                <li>Dictionary data via '(unofficial) Google Dictionary API' (2020). Dictionary API. '(unofficial) Google Dictionary API'. Retrieved Nov. 3, 2020 from https://dictionaryapi.dev/</li>
+                <li>Loading image via Tyler Howarth (2018). Elipsis.gif. Wikimedia. Retrieved Nov. 3, 2020 from https://upload.wikimedia.org/wikipedia/commons/6/63/Elipsis.gif</li>
+                <li>Nontraditional gender color scheme via Lisa Charlotte (2018). An alternative to pink & blue: Colors for gender data. Chartable. Retrieved Nov. 3, 2020 from https://blog.datawrapper.de/gendercolor/</li>
+                <li>Story to sentence regex adapted from Antonín Slejška (2015). Split string into sentences in javascript. Stack Overflow. Retrieved Nov. 3, 2020 from https://stackoverflow.com/a/31430385</li>
+                <li>Punctuation stripping regex adapted from '01AutoMonkey' (2014). How can I strip all punctuation from a string in JavaScript using regex? Stack Overflow. Retrieved Nov. 3, 2020 from https://stackoverflow.com/a/4328722</li>
+                <li>Tooltip setup adapted from Yan Holtz (2018). Scatterplot with tooltip in d3.js. D3.js Graph Gallery. Retrieved Nov. 3, 2020 from https://www.d3-graph-gallery.com/graph/scatter_tooltip.html</li>
+                <li>Force layout setup adapted from Peter Cook (2019). Force Layout. D3 in Depth. Retrieved Nov. 3, 2020 from https://www.d3indepth.com/force-layout/</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Loading Image via Tyler Howarth. (2018). Elipsis.gif. Wikimedia. Retrieved Nov. 3, 2020 from https://upload.wikimedia.org/wikipedia/commons/6/63/Elipsis.gif -->
+    <img src="images/loading.gif" id="loading" alt="Loading..." width="75" height="75">
+    <div id="contents" style="display: none;">
+        <div id="left_column">
+            <div id="story_selector"></div>
+        </div>
+        <div id="right_column">
+            <h2>Gender Presence</h2>
+            <div id="streamgraph_help" class="help">?
+                <div id="streamgraph_help_tooltip" class="helpTooltip"><p>Number of gender references as the plot progresses. Consolidated into twenty distinct bins for visual clarity.</p></div>
+            </div>
+            <div id="streamgraph"></div>
+            <h2>Plot Breakdown</h2>
+            <div id="ratios_help" class="help">?
+                <div id="ratios_help_tooltip" class="helpTooltip"><p>A breakdown of gendered language by plot action and description. Large disparities may indicate unequal gender roles and portrayals.</p></div>
+            </div>
+            <div id="ratios">
+                <div id="action_ratio"></div>
+                <div id="description_ratio"></div>
+            </div>
+            <h2>Gendered Words</h2>
+            <div id="force_layout_help" class="help">?
+                <div id="force_layout_help_tooltip" class="helpTooltip"><p>Up to 250 words with the strongest & most prevalent gender associations.</p></div>
+            </div>
+            <div id="force_layout"></div>
+        </div>
+    </div>
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="js/storySelector.js"></script>
+    <script src="js/streamgraph.js"></script>
+    <script src="js/actionRatio.js"></script>
+    <script src="js/descriptionRatio.js"></script>
+    <script src="js/forceLayout.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
